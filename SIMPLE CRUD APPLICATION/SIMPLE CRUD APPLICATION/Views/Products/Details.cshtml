@@ -1,0 +1,43 @@
+﻿@model SIMPLE_CRUD_APPLICATION.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details of a Product</h2>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Category)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-outline-dark" asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> 
+    <a asp-action="Index" style="text-decoration:none;">
+        <i class="fa fa-arrow-left" style="margin-left:10px;" aria-hidden="true"></i> Back to List
+    </a>
+</div>
